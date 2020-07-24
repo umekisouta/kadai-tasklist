@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<label for="title">タイトル</label><br />
-<input type="text" name="title" value="${message.title}" />
+<label for="id">タイトル</label><br />
+<input type="text" name="id" value="${Task.id}" />
 <br /><br />
 
 <label for="content">メッセージ</label><br />
-<input type="text" name="content" value="${message.content}" />
+<input type="text" name="content" value="${Task.content}" />
 <br /><br />
 
 <input type="hidden" name="_token" value="${_token}" />
