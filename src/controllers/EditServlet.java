@@ -40,11 +40,11 @@ public class EditServlet extends HttpServlet {
         em.close();
 
         // メッセージ情報とセッションIDをリクエストスコープに登録
-        request.setAttribute("message", t);
+        request.setAttribute("Task", t);
         request.setAttribute("_token", request.getSession().getId());
 
         // メッセージIDをセッションスコープに登録
-        request.getSession().setAttribute("message_id", t.getId());
+        request.getSession().setAttribute("id", t.getId());
 
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/messages/edit.jsp");
         rd.forward(request, response);
